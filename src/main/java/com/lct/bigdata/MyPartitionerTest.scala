@@ -5,6 +5,13 @@ import org.apache.spark.sql.SparkSession
 
 /*
 通过自定义partitioner，控制相同key的数据在同一个分区，在输出的时候，输出到同一个文件。
+测试数据：
+a b
+a c
+a c
+c b
+a b
+a d
  */
 object MyPartitionerTest {
   def main(args: Array[String]): Unit = {
